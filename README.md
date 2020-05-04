@@ -31,11 +31,6 @@ npm install npm@latest -g
 
   * Work in progress
 
-```sh
-make install
-npm test
-```
-
 ## Release History
 
 * 0.0.1
