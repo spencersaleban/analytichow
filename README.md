@@ -35,8 +35,12 @@ npm install npm@latest -g
 
 * 0.0.1
     * Work in progress
+<!-- ROADMAP -->
+## Roadmap
 
-## Meta
+  * Work in progress
+
+## Contact
 
 Spencer Saleban – [@spencersaleban](https://spencersaleban.com) – spencer@spencersaleban.com 
 
