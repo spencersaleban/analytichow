@@ -9,7 +9,7 @@ Analyticwise
 ![GitHub stars](https://img.shields.io/github/stars/spencersaleban/analytichow?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/spencersaleban/analytichow?style=social)
 
-![](Logo.png)
+![](logo.png)
  
 Analyticwise is a webapp that dedicates it's functionality to produce a reliable data for each user in their chosen source of online activies. It does so by using chartist.js and Dygraphs tools to visualize data for users. 
 It allows users to easily add or remove source, and the posibilities to download or erase their data. The app also has the feature where a user can set up a limit for one or each of their chosen sources. A warning will be send if the limit is about to be reached or a notification that the limit has been reached if it is reached. 
