@@ -28,7 +28,7 @@ npm install npm@latest -g
 ```
 
 ## Usage example
-![](Desktop HD.png)
+![](landing.png)
 ![](setup.png)
 ![](Reports.png )
 
