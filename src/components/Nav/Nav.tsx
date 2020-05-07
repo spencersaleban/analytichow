@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         menu: {
             margin: theme.spacing(0, '20%'),
+            position: 'relative',
         },
         span: {
           marginLeft: '30px',

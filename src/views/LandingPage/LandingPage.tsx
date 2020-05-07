@@ -9,11 +9,13 @@ import intro1 from '../../assets/img/Logo.png';
 
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme: Theme) => {
-        imageItem: {
-            padding: theme.spacing(20, 0)
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+            Footer: {
+      
+            }
         }
-    }
+    )
 );
 
 const LandingPage: React.FC = () => {
@@ -25,7 +27,7 @@ const LandingPage: React.FC = () => {
     return (
         <div className="LandingPage" data-testid="LandingPage">
             <div className="Nav"><Nav/></div>
-            
+
             <div className="Footer"><Footer/></div>
         </div>
     )
