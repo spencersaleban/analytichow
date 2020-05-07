@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {createStyles, makeStyles, Theme} from '@material-ui/core/styles'
-import ListItem from '@material-ui/core/ListItem'
 import List from '@material-ui/core/List'
 import {Toolbar} from '@material-ui/core';
 import AppBar from "@material-ui/core/AppBar";
@@ -13,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
         footer: {
             background: '#161515',
-            top: 470,
+            top: 100,
 
         },
         grow: {
@@ -24,11 +23,16 @@ const useStyles = makeStyles((theme: Theme) =>
         email: {
             color: '#EDDDA8',
         },
+        support: {
+            marginBottom: 50,
+        },
         root: {
             background: '#161515',
             width: '100%',
             padding: 'none',
-
+        },
+        li: {
+            margin: 0,
         },
 
         solid: {
@@ -54,12 +58,12 @@ const Footer: React.FC = () => {
                 <Toolbar>
 
                     <List className={classes.root}>
-                        <ListItem>
+                        <div className={classes.contact}>
                             <h4>Contact</h4>
-                        </ListItem>
-                        <ListItem>
+                        </div>
+                        <div className={classes.support}>
                             <p><span className={classes.email}>E</span> support@analyticwise.com</p>
-                        </ListItem>
+                        </div >
                         <hr className={classes.solid}/>
                         <li>
                             <Typography

@@ -11,8 +11,9 @@ import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-            Footer: {
-      
+            carousel: {
+                position: 'relative',
+                top: 130,
             }
         }
     )
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const LandingPage: React.FC = () => {
     const classes = useStyles();
 
-    const images = [{image: intro1}, ];
+    const images = [{image: intro1},];
 
 //width:"60vw",height:"70vh"
     return (

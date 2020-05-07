@@ -16,7 +16,7 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import NotchedOutline from "@material-ui/core/OutlinedInput/NotchedOutline";
 import Logo from '../../assets/img/Logo-second.png'
 import {Button} from "@material-ui/core";
-
+import { withRouter } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         title: {
             color: '#EDDDA8',
-            marginLeft: '30px',
             fontSize: '40px',
             fontFamily: 'Helvetica',
             lineHeight: '30px',
@@ -42,12 +41,14 @@ const useStyles = makeStyles((theme: Theme) =>
             },
         },
         slogan: {
+            display: 'block',
             fontSize: '11px',
             margin: theme.spacing(0, 'auto')
         },
         menu: {
             margin: theme.spacing(0, '20%'),
             position: 'relative',
+            top: 10,
         },
         span: {
           marginLeft: '30px',
@@ -96,6 +97,8 @@ const useStyles = makeStyles((theme: Theme) =>
             [theme.breakpoints.up('md')]: {
                 display: 'flex',
             },
+            position: 'relative',
+            bottom: 10,
         },
         sectionMobile: {
             color:'#EDDDA8',
@@ -107,7 +110,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-const Nav: React.FC = () => {
+const Nav: React.FC = (props) => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -169,6 +172,10 @@ const Nav: React.FC = () => {
 
     );
 
+    const handleLogin = () => {
+        props.history.push('/setup')
+    }
+
     return (
         <div className={classes.grow}>
             <AppBar className={classes.header} position="static">
@@ -176,7 +183,7 @@ const Nav: React.FC = () => {
                     <img src={Logo} />
                     <Typography className={classes.title} >
                         Analytichow
-                        <p className={classes.slogan}>__We take pride in impeccable analytics__</p>
+                        <span className={classes.slogan}>__We take pride in impeccable analytics__</span>
                     </Typography>
                     <div className={classes.menu}>
                         <Button color="inherit">Features</Button>
@@ -184,7 +191,7 @@ const Nav: React.FC = () => {
                     </div>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
-                        <Button color="inherit">Login</Button>
+                        <Button color="inherit" onClick={handleLogin}>Login</Button>
                         <Button color="inherit">Contact Us</Button>
                     </div>
                     <div className={classes.sectionMobile}>
@@ -205,4 +212,4 @@ const Nav: React.FC = () => {
         </div>
     );
 }
-export default Nav;
+export default withRouter(Nav);

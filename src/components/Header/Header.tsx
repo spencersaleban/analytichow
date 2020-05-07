@@ -16,6 +16,8 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import headerStyle from "../../assets/jss/analytichow/components/headerStyle";
 import NotchedOutline from "@material-ui/core/OutlinedInput/NotchedOutline";
 import Logo from '../../assets/img/Logo-second.png'
+import {Button} from "@material-ui/core";
+import { withRouter } from "react-router-dom";
 
 
 
@@ -37,42 +39,10 @@ const useStyles = makeStyles((theme: Theme) =>
                 display: 'block',
             },
         },
-        search: {
+        menu: {
+            margin: theme.spacing(0, '20%'),
             position: 'relative',
-            borderRadius: theme.shape.borderRadius,
-            backgroundColor: fade(theme.palette.common.white, 0.15),
-            '&:hover': {
-                backgroundColor: fade(theme.palette.common.white, 0.25),
-            },
-            marginRight: theme.spacing(2),
-            marginLeft: 0,
-            width: '100%',
-            [theme.breakpoints.up('sm')]: {
-                marginLeft: theme.spacing(3),
-                width: 'auto',
-            },
-        },
-        searchIcon: {
-            padding: theme.spacing(0, 2),
-            height: '100%',
-            position: 'absolute',
-            pointerEvents: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-        },
-        inputRoot: {
-            color: 'inherit',
-        },
-        inputInput: {
-            padding: theme.spacing(1, 1, 1, 0),
-            // vertical padding + font size from searchIcon
-            paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-            transition: theme.transitions.create('width'),
-            width: '100%',
-            [theme.breakpoints.up('md')]: {
-                width: '20ch',
-            },
+            top: 10,
         },
         sectionDesktop: {
             color:'#EDDDA8',
@@ -91,7 +61,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-const Header: React.FC = () => {
+const Header: React.FC = (props) => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -173,6 +143,14 @@ const Header: React.FC = () => {
         
     );
 
+    const handleSetup = () => {
+        props.history.push('/setup')
+    }
+
+    const handleReports = () => {
+        props.history.push('/reports')
+    }
+
     return (
         <div className={classes.grow}>
             <AppBar className={classes.header} position="static">
@@ -181,6 +159,10 @@ const Header: React.FC = () => {
                     <Typography className={classes.title} variant="h6" noWrap>
                         Analytichow
                     </Typography>
+                    <div className={classes.menu}>
+                        <Button color="inherit" onClick={handleSetup}>Setup</Button>
+                        <Button color="inherit" onClick={handleReports}>Reports</Button>
+                    </div>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <IconButton
@@ -221,4 +203,4 @@ const Header: React.FC = () => {
         </div>
     );
 }
-export default Header;
+export default withRouter(Header);
