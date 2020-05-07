@@ -1,5 +1,5 @@
 import React from 'react';
-import './Carousel.scss';
+import '../../assets/jss/scss/Carousel.scss';
 
 const Carousel: React.FC = () => (
   <div className="Carousel" data-testid="Carousel">

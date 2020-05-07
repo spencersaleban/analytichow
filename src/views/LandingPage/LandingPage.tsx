@@ -2,7 +2,7 @@ import * as React from 'react';
 import '../../assets/jss/scss/LandingPage.scss';
 import Footer from "../../components/Footer/Footer";
 import Nav from "../../components/Nav/Nav";
-
+import Search from "../../components/Search/Search";
 
 import intro1 from '../../assets/img/Logo.png';
 
@@ -26,9 +26,9 @@ const LandingPage: React.FC = () => {
 //width:"60vw",height:"70vh"
     return (
         <div className="LandingPage" data-testid="LandingPage">
-            <div className="Nav"><Nav/></div>
-
-            <div className="Footer"><Footer/></div>
+            <div className={classes.nav}><Nav/></div>
+            <div className={classes.search}><Search/></div>
+            <div className={classes.footer}><Footer/></div>
         </div>
     )
 };
