@@ -3,7 +3,7 @@ import '../../assets/jss/scss/LandingPage.scss';
 import Footer from "../../components/Footer/Footer";
 import Nav from "../../components/Nav/Nav";
 import Search from "../../components/Search/Search";
-
+import Slider from "../../components/Carousel/Slider";
 import intro1 from '../../assets/img/Logo.png';
 
 
@@ -28,6 +28,7 @@ const LandingPage: React.FC = () => {
         <div className="LandingPage" data-testid="LandingPage">
             <div className={classes.nav}><Nav/></div>
             <div className={classes.search}><Search/></div>
+            <div className={classes.carousel}><Slider/></div>
             <div className={classes.footer}><Footer/></div>
         </div>
     )

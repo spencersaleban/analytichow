@@ -1,14 +1,14 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Carousel from '../components/Carousel/Carousel';
+import Slider from '../components/Carousel/Slider';
 
-describe('<Carousel />', () => {
+describe('<Slider />', () => {
   afterEach(cleanup);
 
   test('it should mount', () => {
-    const { getByTestId } = render(<Carousel />);
-    const carousel = getByTestId('Carousel');
+    const { getByTestId } = render(<Slider />);
+    const carousel = getByTestId('Slider');
 
     expect(carousel).toBeInTheDocument();
   });
