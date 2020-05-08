@@ -1,6 +1,6 @@
 const mongoose = require('./db')
 
-const appsSchema = mongoose.Schema({
+const appSchema = mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -11,7 +11,7 @@ const appsSchema = mongoose.Schema({
   },
   date: {
     type: Date,
-    required: true
+    required: false
   },
   user: {
     type: String,
@@ -19,4 +19,4 @@ const appsSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('apps', appsSchema);
+module.exports = mongoose.model('apps', appSchema);
