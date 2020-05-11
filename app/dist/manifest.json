@@ -1,0 +1,22 @@
+{
+  "name": "Analyticwise",
+  "description": "We take pride in impeccable analytics",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "manager.html",
+    "default_title": "Open the popup",
+    "default_icon": "extension.png"
+  },
+  "icons": {
+    "16": "extension.png"
+
+  },
+  "permissions": [
+    "cookies", "tabs", "http://*/*", "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "manifest_version": 2
+}

@@ -62,7 +62,6 @@ const Setup: React.FC = (props) => {
     });
 
 
-
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -146,7 +145,9 @@ const Setup: React.FC = (props) => {
                                                 <Button onClick={handleClose} color="primary">
                                                     Cancel
                                                 </Button>
-                                                <Button onClick={(event) => {handleAdd(event, addApp)}} color="primary">
+                                                <Button onClick={(event) => {
+                                                    handleAdd(event, addApp)
+                                                }} color="primary">
                                                     Add
                                                 </Button>
                                             </DialogActions>
@@ -154,12 +155,12 @@ const Setup: React.FC = (props) => {
                                     </div>
                                     <Grid container spacing={1}>
 
-                                        { data.apps.map(app =>
-                                        <Grid container item xs={12} spacing={3} key={app.id}>
-                                            <Grid item xs={4}>
-                                                <Paper className={classes.paper}>{app.name}</Paper>
+                                        {data.apps.map(app =>
+                                            <Grid container item xs={12} spacing={3} key={app.id}>
+                                                <Grid item xs={4}>
+                                                    <Paper className={classes.paper}>{app.name}</Paper>
+                                                </Grid>
                                             </Grid>
-                                        </Grid>,
                                         )}
                                     </Grid>
                                 </div>
